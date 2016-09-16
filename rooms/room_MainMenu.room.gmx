@@ -10,7 +10,68 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>audio_play_sound(mus_titlescreen, 128, true);</code>
+  <code>var version = "[PRE-ALPHA]" + " " + "1.0.0.1";
+
+audio_play_sound(mus_titlescreen, 128, true);
+
+ini_open(working_directory + "temp_ini.ini");
+ini_open(temp_directory + "\temp_ini.ini");
+
+//Writes version info to gamedata.ini
+ini_open(working_directory + "\gamedata.ini");
+ini_write_string("Game", "Version", version);
+ini_close();
+
+//enable fullscreen when "true" in gamedata.ini
+ini_open( 'gamedata.ini' );
+if ini_read_string('Game', 'Fullscreen', 'true')
+   {
+   if window_get_fullscreen()
+      {
+      window_set_fullscreen(false);
+      }
+   else
+      {
+      window_set_fullscreen(false);
+      }
+   }
+ini_close();
+
+//disable fullscreen when "false" in gamedata.ini
+ini_open( 'gamedata.ini' );
+if ini_read_string('Game', 'Fullscreen', 'false')
+   {
+   if window_get_fullscreen()
+      {
+      window_set_fullscreen(true);
+      }
+   else
+      {
+      window_set_fullscreen(false);
+      }
+   }
+ini_close();
+
+
+
+if !directory_exists("saves")
+   {
+   directory_create("saves");
+   }
+   
+if !directory_exists("logs")
+   {
+   directory_create("logs");
+   }
+   
+if !directory_exists("crash-reports")
+   {
+   directory_create("crash-reports");
+   }
+   
+//DLC Downloader
+   var num = zip_unzip(temp_directory + "/downloads/temp/dlc/level_data.zip", working_directory + "/dlc/");
+   var num = zip_unzip(temp_directory + "/downloads/temp/dlc/skin_petergriffin.zip", working_directory + "/dlc/skins/FatGuy");</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -58,6 +119,7 @@
     <instance objName="obj_slash" x="480" y="352" name="inst_2DBBA537" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_btn_save" x="544" y="352" name="inst_696E5FCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_version" x="768" y="704" name="inst_E746D084" locked="0" code="" scaleX="0.484848499298096" scaleY="0.41818180680275" colour="4294967295" rotation="0"/>
+    <instance objName="obj_logo" x="512" y="128" name="inst_322C5E55" locked="0" code="" scaleX="0.735050618648529" scaleY="0.636363625526428" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

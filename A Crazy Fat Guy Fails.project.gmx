@@ -3,11 +3,11 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="5" name="datafiles">
+  <datafiles number="7" name="datafiles">
     <datafile>
-      <name>Jtrent238's YouTube.ico</name>
+      <name>README.TXT</name>
       <exists>-1</exists>
-      <size>191295</size>
+      <size>313</size>
       <exportAction>2</exportAction>
       <exportDir></exportDir>
       <overwrite>0</overwrite>
@@ -19,12 +19,12 @@
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
-      <filename>Jtrent238's YouTube.ico</filename>
+      <filename>README.TXT</filename>
     </datafile>
     <datafile>
-      <name>jtrent238YT</name>
-      <exists>0</exists>
-      <size>0</size>
+      <name>savedir.bat</name>
+      <exists>-1</exists>
+      <size>67</size>
       <exportAction>2</exportAction>
       <exportDir></exportDir>
       <overwrite>0</overwrite>
@@ -36,7 +36,7 @@
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
-      <filename>jtrent238YT</filename>
+      <filename>savedir.bat</filename>
     </datafile>
   </datafiles>
   <NewExtensions>
@@ -47,7 +47,6 @@
     <extension index="4">extensions\String Abbreviate</extension>
     <extension index="5">extensions\Pause Extension</extension>
     <extension index="6">extensions\Custom Bar</extension>
-    <extension index="7">extensions\Mine Tileset</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\sound_torturescream</sound>
@@ -67,6 +66,8 @@
       <sprites name="level buttons">
         <sprite>sprites\spr_btn_lvl_1</sprite>
         <sprite>sprites\spr_btn_lvl_1_hover</sprite>
+        <sprite>sprites\spr_btn_lvl_2</sprite>
+        <sprite>sprites\spr_btn_lvl_2_hover</sprite>
       </sprites>
       <sprites name="Main Menu Buttons">
         <sprite>sprites\spr_btn_save_hover</sprite>
@@ -99,6 +100,8 @@
             <sprite>sprites\spr_btn_fscreen_disable_hover</sprite>
           </sprites>
         </sprites>
+        <sprite>sprites\spr_btn_setusr</sprite>
+        <sprite>sprites\spr_btn_setusr_hover</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\spr_slash</sprite>
@@ -108,6 +111,9 @@
     <sprites name="FatGuys">
       <sprite>sprites\spr_FatGuy0</sprite>
       <sprite>sprites\spr_FatGuy1</sprite>
+      <sprites name="DLC">
+        <sprite>sprites\spr_FatGuy_petergriffin</sprite>
+      </sprites>
     </sprites>
     <sprites name="coins">
       <sprite>sprites\spr_coin1</sprite>
@@ -121,6 +127,10 @@
       <sprite>sprites\spr_block2</sprite>
       <sprite>sprites\spr_block1</sprite>
       <sprite>sprites\spr_block0</sprite>
+      <sprites name="spikes">
+        <sprite>sprites\spr_spike0</sprite>
+        <sprite>sprites\spr_spike1</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\spr_pause</sprite>
     <sprite>sprites\spr_version</sprite>
@@ -128,101 +138,8 @@
     <sprite>sprites\spr_guiBar</sprite>
     <sprite>sprites\spr_xpBar</sprite>
     <sprite>sprites\spr_lifeBar</sprite>
-    <sprites name="mine_tileset">
-      <sprites name="miscs">
-        <sprite>sprites\spr_box_small</sprite>
-        <sprite>sprites\spr_box</sprite>
-        <sprite>sprites\spr_box_big</sprite>
-        <sprite>sprites\spr_staircase</sprite>
-        <sprite>sprites\spr_blade</sprite>
-        <sprite>sprites\spr_chest</sprite>
-        <sprite>sprites\spr_thorns</sprite>
-        <sprite>sprites\spr_bridge</sprite>
-        <sprite>sprites\spr_cart</sprite>
-      </sprites>
-      <sprites name="ground">
-        <sprites name="right">
-          <sprite>sprites\spr_ground_right_1</sprite>
-          <sprite>sprites\spr_ground_right_2</sprite>
-          <sprite>sprites\spr_ground_right_3</sprite>
-          <sprite>sprites\spr_ground_right_4</sprite>
-          <sprite>sprites\spr_ground_right_5</sprite>
-          <sprite>sprites\spr_ground_right_6</sprite>
-          <sprite>sprites\spr_ground_right_7</sprite>
-          <sprite>sprites\spr_ground_right_8</sprite>
-          <sprite>sprites\spr_ground_right_9</sprite>
-          <sprite>sprites\spr_ground_right_10</sprite>
-          <sprite>sprites\spr_ground_right_11</sprite>
-          <sprite>sprites\spr_ground_right_12</sprite>
-        </sprites>
-        <sprites name="left">
-          <sprite>sprites\spr_ground_left_1</sprite>
-          <sprite>sprites\spr_ground_left_2</sprite>
-          <sprite>sprites\spr_ground_left_3</sprite>
-          <sprite>sprites\spr_ground_left_4</sprite>
-          <sprite>sprites\spr_ground_left_5</sprite>
-          <sprite>sprites\spr_ground_left_6</sprite>
-          <sprite>sprites\spr_ground_left_7</sprite>
-          <sprite>sprites\spr_ground_left_8</sprite>
-          <sprite>sprites\spr_ground_left_9</sprite>
-          <sprite>sprites\spr_ground_left_10</sprite>
-          <sprite>sprites\spr_ground_left_11</sprite>
-          <sprite>sprites\spr_ground_left_12</sprite>
-        </sprites>
-        <sprites name="center">
-          <sprite>sprites\spr_ground_center_1</sprite>
-          <sprite>sprites\spr_ground_center_2</sprite>
-          <sprite>sprites\spr_ground_center_3</sprite>
-          <sprite>sprites\spr_ground_center_4</sprite>
-          <sprite>sprites\spr_ground_center_5</sprite>
-          <sprite>sprites\spr_ground_center_6</sprite>
-          <sprite>sprites\spr_ground_center_7</sprite>
-          <sprite>sprites\spr_ground_center_8</sprite>
-          <sprite>sprites\spr_ground_center_9</sprite>
-          <sprite>sprites\spr_ground_center_10</sprite>
-          <sprite>sprites\spr_ground_center_11</sprite>
-          <sprite>sprites\spr_ground_center_12</sprite>
-          <sprite>sprites\spr_ground_center_13</sprite>
-          <sprite>sprites\spr_ground_center_14</sprite>
-          <sprite>sprites\spr_ground_center_15</sprite>
-          <sprite>sprites\spr_ground_center_16</sprite>
-          <sprite>sprites\spr_ground_center_17</sprite>
-        </sprites>
-        <sprites name="bottom">
-          <sprite>sprites\spr_ground_bottom_left_right_1</sprite>
-          <sprite>sprites\spr_ground_bottom_left_right_2</sprite>
-          <sprite>sprites\spr_ground_bottom_left_3</sprite>
-          <sprite>sprites\spr_ground_bottom_right_4</sprite>
-          <sprite>sprites\spr_ground_bottom_left_5</sprite>
-          <sprite>sprites\spr_ground_bottom_right_6</sprite>
-          <sprite>sprites\spr_ground_bottom_7</sprite>
-          <sprite>sprites\spr_ground_bottom_8</sprite>
-        </sprites>
-      </sprites>
-      <sprites name="gems">
-        <sprite>sprites\spr_blue_gem</sprite>
-        <sprite>sprites\spr_red_gem</sprite>
-        <sprite>sprites\spr_green_gem</sprite>
-      </sprites>
-      <sprites name="boards">
-        <sprites name="black">
-          <sprite>sprites\spr_up_black</sprite>
-          <sprite>sprites\spr_down_black</sprite>
-          <sprite>sprites\spr_left_black</sprite>
-          <sprite>sprites\spr_right_black</sprite>
-          <sprite>sprites\spr_boss_black</sprite>
-          <sprite>sprites\spr_alert_black</sprite>
-        </sprites>
-        <sprites name="red">
-          <sprite>sprites\spr_up_red</sprite>
-          <sprite>sprites\spr_down_red</sprite>
-          <sprite>sprites\spr_left_red</sprite>
-          <sprite>sprites\spr_right_red</sprite>
-          <sprite>sprites\spr_boss_red</sprite>
-          <sprite>sprites\spr_alert_red</sprite>
-        </sprites>
-      </sprites>
-    </sprites>
+    <sprite>sprites\spr_current_FatGuy_text</sprite>
+    <sprite>sprites\spr_logo</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="menu_backgrounds">
@@ -291,6 +208,10 @@
       <script>scripts\game_is_paused.gml</script>
     </scripts>
     <script>scripts\scr_bar.gml</script>
+    <scripts name="save/load">
+      <script>scripts\scr_gamesave.gml</script>
+      <script>scripts\scr_gameload.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -313,6 +234,8 @@
       <objects name="level buttons">
         <object>objects\obj_btn_lvl_1</object>
         <object>objects\obj_btn_lvl_1_hover</object>
+        <object>objects\obj_btn_lvl_2</object>
+        <object>objects\obj_btn_lvl_2_hover</object>
       </objects>
       <objects name="Main Menu Buttons">
         <object>objects\obj_btn_save_hover</object>
@@ -332,17 +255,21 @@
             <object>objects\obj_btn_back_lvl_select</object>
             <object>objects\obj_btn_back_lvl_select_hover</object>
           </objects>
-          <objects name="fatguy_sel">
-            <object>objects\obj_btn_back_fatguy_sel</object>
-            <object>objects\obj_btn_back_fatguy_sel_hover</object>
-          </objects>
           <objects name="settings">
             <object>objects\obj_btn_settings_back</object>
             <object>objects\obj_btn_back_settings_hover</object>
-          </objects>
-          <objects name="disp_settings">
-            <object>objects\obj_btn_disp_settings_back</object>
-            <object>objects\obj_btn_disp_settings_back_hover</object>
+            <objects name="disp_settings">
+              <object>objects\obj_btn_disp_settings_back</object>
+              <object>objects\obj_btn_disp_settings_back_hover</object>
+            </objects>
+            <objects name="fatguy_sel">
+              <object>objects\obj_btn_back_fatguy_sel</object>
+              <object>objects\obj_btn_back_fatguy_sel_hover</object>
+            </objects>
+            <objects name="setusr">
+              <object>objects\obj_btn_setusr_back</object>
+              <object>objects\obj_btn_setusr_back_hover</object>
+            </objects>
           </objects>
         </objects>
       </objects>
@@ -361,15 +288,14 @@
             <object>objects\obj_btn_fscreen_disable_hover</object>
           </objects>
         </objects>
+        <object>objects\obj_btn_setusr</object>
+        <object>objects\obj_btn_setusr_hover</object>
       </objects>
     </objects>
     <object>objects\obj_slash</object>
     <objects name="level_icons">
       <object>objects\obj_lvl_1</object>
     </objects>
-    <object>objects\obj_block0</object>
-    <object>objects\obj_block1</object>
-    <object>objects\obj_block2</object>
     <object>objects\obj_demo</object>
     <object>objects\obj_console</object>
     <objects name="Pause Extension">
@@ -381,9 +307,30 @@
     <objects name="FatGuys">
       <object>objects\obj_FatGuy0</object>
       <object>objects\obj_FatGuy1</object>
+      <objects name="FatGuy Select Icons">
+        <object>objects\obj_FatGuy1_sel</object>
+        <object>objects\obj_FatGuy0_sel</object>
+      </objects>
+      <objects name="DLC">
+        <object>objects\obj_FatGuy_petergriffin</object>
+      </objects>
     </objects>
     <object>objects\obj_FatGuy_Dummy</object>
     <object>objects\obj_guiBar</object>
+    <objects name="blocks">
+      <object>objects\obj_block1</object>
+      <object>objects\obj_block2</object>
+      <object>objects\obj_block0</object>
+      <objects name="spikes">
+        <object>objects\obj_spike0</object>
+        <object>objects\obj_spike</object>
+      </objects>
+    </objects>
+    <object>objects\obj_current_FatGuy_text</object>
+    <object>objects\obj_collide</object>
+    <object>objects\obj_FatGuy_current</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_logo</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menus">
@@ -392,10 +339,12 @@
       <room>rooms\room_lvl_select</room>
       <room>rooms\room_fatguy_sel</room>
       <room>rooms\room_disp_settings</room>
+      <room>rooms\room_setusr</room>
     </rooms>
     <rooms name="levels">
       <room>rooms\room_lvl_tut</room>
       <room>rooms\room_lvl_1</room>
+      <room>rooms\room_lvl_2</room>
     </rooms>
     <room>rooms\room_demo</room>
     <room>rooms\room0</room>
