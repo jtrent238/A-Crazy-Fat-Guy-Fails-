@@ -12,4 +12,4 @@ You are allowed to create dlc for this game, and are allowed to distribute the d
 
 Current offical DLC:
 
-Peter Griffin Skin
+Peter Griffin Skin - [Download](https://jtrent238.github.io/A-Crazy-Fat-Guy-Fails-/downloads/dlc/dl/skin_petergriffin.zip)
